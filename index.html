@@ -43,8 +43,26 @@
       font-size: 30px;
       font-weight: bold;
       letter-spacing: 2px;
-      margin-bottom: 60px;
+      margin-bottom: 35px;
       color: #f2f2f2;
+    }
+
+    /* TikTok instruction */
+    .instruction {
+      display: none;
+      background: #e4b936;
+      color: #111;
+      padding: 25px 20px;
+      border-radius: 25px;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    /* Contact buttons */
+    .contacts {
+      display: block;
     }
 
     .button {
@@ -64,20 +82,11 @@
       transform: scale(0.97);
     }
 
-    /* OPEN BROWSER BUTTON */
-    .browser {
-      background: #e4b936;
-      color: #111;
-      box-shadow: 0 8px 25px rgba(228, 185, 54, 0.2);
-    }
-
-    /* TELEGRAM BUTTON */
     .telegram {
       background: #e4b936;
       color: #111;
     }
 
-    /* WHATSAPP BUTTON */
     .whatsapp {
       background: transparent;
       color: #e4b936;
@@ -90,8 +99,17 @@
       font-size: 13px;
     }
 
-    @media (max-width: 480px) {
+    /* When TikTok browser is detected */
+    body.tiktok .instruction {
+      display: block;
+    }
 
+    body.tiktok .contacts,
+    body.tiktok .footer {
+      display: none;
+    }
+
+    @media (max-width: 480px) {
       .container {
         padding: 30px 20px;
       }
@@ -102,15 +120,17 @@
 
       .title {
         font-size: 25px;
-        margin-bottom: 45px;
       }
 
       .button {
         font-size: 21px;
         padding: 25px 15px;
       }
-    }
 
+      .instruction {
+        font-size: 19px;
+      }
+    }
   </style>
 </head>
 
@@ -126,41 +146,40 @@
       CONTACT US TO JOIN
     </div>
 
-
-    <!-- OPEN IN BROWSER -->
-    <a
-      class="button browser"
-      href="https://rqsowner.github.io/"
-      target="_blank"
-      rel="noopener noreferrer">
-
+    <!-- TIKTOK ONLY -->
+    <div class="instruction">
+      👆 CLICK (...)<br>
       🌐 OPEN IN BROWSER
-
-    </a>
-
-
-    <!-- TELEGRAM -->
-    <a
-      class="button telegram"
-      href="https://t.me/R_Q_S_grup"
-      target="_blank"
-      rel="noopener noreferrer">
-
-      ✈️ TELEGRAM
-
-    </a>
+    </div>
 
 
-    <!-- WHATSAPP -->
-    <a
-      class="button whatsapp"
-      href="https://wa.me/966565717120"
-      target="_blank"
-      rel="noopener noreferrer">
+    <!-- NORMAL BROWSER ONLY -->
+    <div class="contacts">
 
-      📞 WHATSAPP
+      <!-- TELEGRAM -->
+      <a
+        class="button telegram"
+        href="https://t.me/R_Q_S_grup"
+        target="_blank"
+        rel="noopener noreferrer">
 
-    </a>
+        ✈️ TELEGRAM
+
+      </a>
+
+
+      <!-- WHATSAPP -->
+      <a
+        class="button whatsapp"
+        href="https://wa.me/966565717120"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        📞 WHATSAPP
+
+      </a>
+
+    </div>
 
 
     <div class="footer">
@@ -168,6 +187,15 @@
     </div>
 
   </div>
+
+
+  <script>
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/TikTok/i.test(userAgent)) {
+      document.body.classList.add("tiktok");
+    }
+  </script>
 
 </body>
 </html>

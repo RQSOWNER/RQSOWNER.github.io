@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>R.Q.S - Contact Us</title>
+  <title>Open in Browser</title>
 
   <style>
     * {
@@ -13,189 +13,33 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background: #000;
+    }
+
     body {
-      min-height: 100vh;
-      background: #08090b;
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
-      align-items: center;
-      color: white;
+      align-items: flex-start;
     }
 
-    .container {
+    img {
       width: 100%;
-      max-width: 600px;
-      padding: 40px 25px;
-      text-align: center;
-    }
-
-    .logo {
-      font-size: 70px;
-      font-weight: bold;
-      color: #e4b936;
-      letter-spacing: 8px;
-      margin-bottom: 35px;
-      text-shadow: 0 0 20px rgba(228, 185, 54, 0.25);
-    }
-
-    .title {
-      font-size: 30px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 35px;
-      color: #f2f2f2;
-    }
-
-    /* TikTok instruction */
-    .instruction {
-      display: none;
-      background: #e4b936;
-      color: #111;
-      padding: 25px 20px;
-      border-radius: 25px;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 1.6;
-      margin-top: 20px;
-    }
-
-    /* Contact buttons */
-    .contacts {
+      height: auto;
       display: block;
-    }
-
-    .button {
-      width: 100%;
-      display: block;
-      padding: 28px 20px;
-      margin: 22px 0;
-      border-radius: 28px;
-      text-decoration: none;
-      font-size: 25px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: 0.2s ease;
-    }
-
-    .button:active {
-      transform: scale(0.97);
-    }
-
-    .telegram {
-      background: #e4b936;
-      color: #111;
-    }
-
-    .whatsapp {
-      background: transparent;
-      color: #e4b936;
-      border: 3px solid #e4b936;
-    }
-
-    .footer {
-      margin-top: 45px;
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* When TikTok browser is detected */
-    body.tiktok .instruction {
-      display: block;
-    }
-
-    body.tiktok .contacts,
-    body.tiktok .footer {
-      display: none;
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 30px 20px;
-      }
-
-      .logo {
-        font-size: 55px;
-      }
-
-      .title {
-        font-size: 25px;
-      }
-
-      .button {
-        font-size: 21px;
-        padding: 25px 15px;
-      }
-
-      .instruction {
-        font-size: 19px;
-      }
+      max-width: 100%;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-
-    <div class="logo">
-      R.Q.S 💡
-    </div>
-
-    <div class="title">
-      CONTACT US TO JOIN
-    </div>
-
-    <!-- TIKTOK ONLY -->
-    <div class="instruction">
-      👆 CLICK (...)<br>
-      🌐 OPEN IN BROWSER
-    </div>
-
-
-    <!-- NORMAL BROWSER ONLY -->
-    <div class="contacts">
-
-      <!-- TELEGRAM -->
-      <a
-        class="button telegram"
-        href="https://t.me/R_Q_S_grup"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        ✈️ TELEGRAM
-
-      </a>
-
-
-      <!-- WHATSAPP -->
-      <a
-        class="button whatsapp"
-        href="https://wa.me/966565717120"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        📞 WHATSAPP
-
-      </a>
-
-    </div>
-
-
-    <div class="footer">
-      © R.Q.S
-    </div>
-
-  </div>
-
-
-  <script>
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    if (/TikTok/i.test(userAgent)) {
-      document.body.classList.add("tiktok");
-    }
-  </script>
+  <img 
+    src="Picsart_26-08-29_21-43-58-372.png" 
+    alt="Open in browser"
+  >
 
 </body>
 </html>

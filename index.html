@@ -1,119 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <title>R.Q.S</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<title>R.Q.S</title>
+    body {
+      background: #08090b;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
 
-<style>
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 30px 25px;
+      text-align: center;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .logo {
+      font-size: 70px;
+      font-weight: bold;
+      color: #e4b936;
+      letter-spacing: 5px;
+      margin-bottom: 25px;
+      text-shadow: 0 0 15px rgba(228, 185, 54, 0.3);
+    }
 
-body {
-    background-color: #080808;
-    color: white;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 70px;
+      color: #f2f2f2;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .button {
+      width: 100%;
+      display: block;
+      text-decoration: none;
+      padding: 28px 20px;
+      margin-bottom: 30px;
+      border-radius: 30px;
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: 0.2s;
+    }
 
-.container {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    padding: 50px 25px;
-}
+    .telegram {
+      background: linear-gradient(135deg, #f4ce45, #d8ab2c);
+      color: #111;
+      box-shadow: 0 5px 20px rgba(228, 185, 54, 0.25);
+    }
 
-.logo {
-    font-size: 70px;
-    font-weight: bold;
-    color: #e4b936;
-    letter-spacing: 5px;
-    margin-bottom: 35px;
-}
+    .whatsapp {
+      background: transparent;
+      color: #e4b936;
+      border: 3px solid #e4b936;
+    }
 
-.title {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 80px;
-    color: #eeeeee;
-}
+    .button:active {
+      transform: scale(0.97);
+    }
 
-.button {
-    width: 100%;
-    display: block;
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 60px;
+      }
 
-    padding: 25px;
-    margin-bottom: 30px;
+      .title {
+        font-size: 28px;
+      }
 
-    border-radius: 25px;
-
-    text-decoration: none;
-
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* TELEGRAM BUTTON */
-
-.telegram {
-    background-color: #e4b936;
-    color: #111111;
-}
-
-/* WHATSAPP BUTTON */
-
-.whatsapp {
-    background-color: transparent;
-    color: #e4b936;
-    border: 3px solid #e4b936;
-}
-
-</style>
-
+      .button {
+        font-size: 24px;
+        padding: 25px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-<div class="logo">
-R.Q.S 💡
-</div>
+    <div class="logo">
+      R.Q.S 💡
+    </div>
 
-<div class="title">
-CONTACT US TO JOIN
-</div>
+    <div class="title">
+      CONTACT US TO JOIN
+    </div>
 
-<a class="button telegram"
-href="https://t.me/R_Q_S_grup">
 
-✈️ TELEGRAM
+    <!-- TELEGRAM BUTTON -->
 
-</a>
+    <a
+      href="#"
+      class="button telegram"
+      onclick="openTelegram(); return false;"
+    >
+      ✈️ TELEGRAM
+    </a>
 
-<a class="button whatsapp"
-href="https://wa.me/96656571720">
 
-☎️ WHATSAPP
+    <!-- WHATSAPP BUTTON -->
 
-</a>
+    <a
+      href="https://wa.me/96656571720"
+      class="button whatsapp"
+      target="_blank"
+      rel="noopener"
+    >
+      ☎️ WHATSAPP
+    </a>
 
-</div>
+  </div>
+
+
+  <script>
+
+    function openTelegram() {
+
+      var telegramApp = "tg://resolve?domain=R_Q_S_grup";
+
+      var telegramWeb = "https://t.me/R_Q_S_grup";
+
+      window.location.href = telegramApp;
+
+      setTimeout(function () {
+
+        window.location.href = telegramWeb;
+
+      }, 1500);
+
+    }
+
+  </script>
 
 </body>
-
 </html>

@@ -2,238 +2,143 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>R.Q.S</title>
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #080808;
-            color: white;
-            font-family: Arial, sans-serif;
-
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-
-            width: 100%;
-            max-width: 600px;
-
-            text-align: center;
-
-            padding: 50px 25px;
-        }
-
-        /* LOGO */
-
-        .logo {
-
-            font-size: 70px;
-
-            font-weight: bold;
-
-            color: #e4b936;
-
-            letter-spacing: 5px;
-
-            margin-bottom: 35px;
-
-            text-shadow:
-                0 0 10px rgba(228,185,54,0.4),
-                0 0 30px rgba(228,185,54,0.2);
-        }
-
-        /* TITLE */
-
-        .title {
-
-            font-size: 32px;
-
-            font-weight: bold;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 80px;
-
-            color: #eeeeee;
-        }
-
-        /* BUTTON */
-
-        .button {
-
-            width: 100%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 18px;
-
-            padding: 25px;
-
-            margin-bottom: 30px;
-
-            border-radius: 25px;
-
-            text-decoration: none;
-
-            font-size: 25px;
-
-            font-weight: bold;
-
-            letter-spacing: 1px;
-
-            transition: 0.3s;
-        }
-
-        .button i {
-
-            font-size: 32px;
-        }
-
-        /* TELEGRAM */
-
-        .telegram {
-
-            background: linear-gradient(
-                135deg,
-                #f1cd52,
-                #c99c20
-            );
-
-            color: #111;
-        }
-
-        /* WHATSAPP */
-
-        .whatsapp {
-
-            background: transparent;
-
-            color: #d8b13a;
-
-            border: 3px solid #d8b13a;
-        }
-
-        /* HOVER */
-
-        .button:hover {
-
-            transform: scale(1.03);
-
-            opacity: 0.9;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 500px) {
-
-            .container {
-
-                padding: 40px 25px;
-            }
-
-            .logo {
-
-                font-size: 60px;
-            }
-
-            .title {
-
-                font-size: 28px;
-
-                margin-bottom: 70px;
-            }
-
-            .button {
-
-                font-size: 23px;
-
-                padding: 24px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>R.Q.S</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.logo {
+    font-size: 70px;
+    font-weight: bold;
+    color: #e4b936;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+    color: #eeeeee;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    padding: 25px;
+    margin-bottom: 30px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.button i {
+    font-size: 32px;
+}
+
+/* TELEGRAM */
+
+.telegram {
+    background: linear-gradient(
+        135deg,
+        #f1cd52,
+        #c99c20
+    );
+
+    color: #111111;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    background: transparent;
+
+    color: #d8b13a;
+
+    border: 3px solid #d8b13a;
+}
+
+</style>
 
 </head>
 
-
 <body>
 
+<div class="container">
 
-    <div class="container">
+<div class="logo">
+R.Q.S 💡
+</div>
 
-
-        <!-- LOGO -->
-
-        <div class="logo">
-
-            R.Q.S 💡
-
-        </div>
+<div class="title">
+CONTACT US TO JOIN
+</div>
 
 
-        <!-- TITLE -->
+<a
+class="button telegram"
+href="https://t.me/R_Q_S_grup"
+target="_blank">
 
-        <div class="title">
+<i class="fa-brands fa-telegram"></i>
 
-            CONTACT US TO JOIN
+TELEGRAM
 
-        </div>
-
-
-        <!-- TELEGRAM BUTTON -->
-
-        <a class="button telegram"
-           href="https://t.me/R_Q_S_grup"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <i class="fa-brands fa-telegram"></i>
-
-            TELEGRAM
-
-        </a>
+</a>
 
 
-        <!-- WHATSAPP BUTTON -->
+<a
+class="button whatsapp"
+href="https://wa.me/96656571720"
+target="_blank">
 
-        <a class="button whatsapp"
-           href="https://wa.me/96656571720"
-           target="_blank"
-           rel="noopener noreferrer">
+<i class="fa-brands fa-whatsapp"></i>
 
-            <i class="fa-brands fa-whatsapp"></i>
+WHATSAPP
 
-            WHATSAPP
+</a>
 
-        </a>
-
-
-    </div>
-
+</div>
 
 </body>
 

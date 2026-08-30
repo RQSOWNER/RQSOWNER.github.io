@@ -7,7 +7,6 @@
   <title>R.Q.S</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -18,26 +17,7 @@
       min-height: 100vh;
       font-family: Arial, sans-serif;
       direction: rtl;
-
-      background-image:
-        linear-gradient(
-          rgba(5, 5, 8, 0.35),
-          rgba(5, 5, 8, 0.55)
-        ),
-        url("Picsart_26-08-30_03-52-27-072.png");
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      padding: 25px 15px;
     }
-
 
     /* =========================
        TIKTOK VIDEO PAGE
@@ -63,16 +43,36 @@
 
 
     /* =========================
-       MAIN CONTAINER
+       BROWSER CONTACT PAGE
     ========================== */
 
     #contact-page {
       display: none;
       width: 100%;
       min-height: 100vh;
+
+      background-image:
+        linear-gradient(
+          rgba(5, 5, 8, 0.35),
+          rgba(5, 5, 8, 0.55)
+        ),
+        url("Picsart_26-08-30_03-52-27-072.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
       justify-content: center;
       align-items: center;
+
+      padding: 25px 15px;
     }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================== */
 
     .container {
       width: 100%;
@@ -87,13 +87,13 @@
 
 
     /* =========================
-       YELLOW INFORMATION BOX
+       YELLOW BOX
     ========================== */
 
     .yellow-box {
-
       width: 100%;
       padding: 22px 20px;
+
       text-align: center;
 
       color: #fff;
@@ -126,9 +126,9 @@
     ========================== */
 
     .red-box {
-
       width: 100%;
       padding: 20px 18px;
+
       text-align: center;
 
       color: #fff;
@@ -157,11 +157,10 @@
 
 
     /* =========================
-       CONTACT BUTTONS
+       TELEGRAM + WHATSAPP
     ========================== */
 
     .buttons-row {
-
       width: 100%;
 
       display: flex;
@@ -177,7 +176,6 @@
 
 
     .contact-button {
-
       width: 48%;
 
       display: flex;
@@ -187,12 +185,11 @@
       text-decoration: none;
       background: transparent;
       border: none;
+
       border-radius: 18px;
       overflow: hidden;
 
-      transition:
-        transform 0.2s ease,
-        filter 0.2s ease;
+      transition: transform 0.2s ease;
 
       -webkit-tap-highlight-color: transparent;
     }
@@ -203,18 +200,13 @@
     }
 
 
-    .contact-button:hover {
-      transform: translateY(-3px);
-      filter: brightness(1.1);
-    }
-
-
     .contact-button img {
-
       width: 100%;
       height: auto;
+
       display: block;
       object-fit: contain;
+
       border-radius: 18px;
     }
 
@@ -225,9 +217,8 @@
 
     @media (max-width: 480px) {
 
-      body {
+      #contact-page {
         padding: 18px 12px;
-        align-items: center;
       }
 
       .container {
@@ -259,11 +250,9 @@
       .contact-button img {
         border-radius: 14px;
       }
-
     }
 
   </style>
-
 </head>
 
 
@@ -287,6 +276,8 @@
         src="lv_0_20260830034239.mp4"
         type="video/mp4">
 
+      Your browser does not support the video tag.
+
     </video>
 
   </div>
@@ -305,20 +296,16 @@
       <!-- YELLOW BOX -->
 
       <div class="yellow-box">
-
         پەیوەندیم پێوە بکە تا ڕێنمایت بکەم
-
       </div>
 
 
       <!-- RED BOX -->
 
       <div class="red-box">
-
         ئاگاداربە یەکەم و تاک گروپین عەقدی قانوونی بۆ بەژدار بوو بکەین،
         کە ئەگەر زەرەری کرد تەواوی پەرەکەی پێ بدەینەوە
         و بە پێی یاسا بتوانێ وەری بگرێتەوە
-
       </div>
 
 
@@ -326,6 +313,8 @@
 
       <div class="buttons-row">
 
+
+        <!-- TELEGRAM -->
 
         <a
           class="contact-button"
@@ -339,6 +328,8 @@
 
         </a>
 
+
+        <!-- WHATSAPP -->
 
         <a
           class="contact-button"
@@ -372,16 +363,13 @@
     const isTikTok =
       /TikTok|musical_ly|Bytedance/i.test(ua);
 
-
     if (isTikTok) {
 
-      document.getElementById("tiktok-page")
-        .style.display = "flex";
+      document.getElementById("tiktok-page").style.display = "flex";
 
     } else {
 
-      document.getElementById("contact-page")
-        .style.display = "flex";
+      document.getElementById("contact-page").style.display = "flex";
 
     }
 

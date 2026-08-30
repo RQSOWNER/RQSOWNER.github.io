@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>R.Q.S - Contact Us</title>
+  <title>R.Q.S</title>
 
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -18,10 +16,43 @@
     body {
       min-height: 100vh;
       background: #08090b;
-      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    /* =========================
+       TIKTOK VIDEO PAGE
+    ========================== */
+
+    #videoPage {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+    }
+
+    #videoPage video {
+      width: 100%;
+      max-width: 600px;
+      height: 100vh;
+      object-fit: contain;
+      background: #000;
+      display: block;
+    }
+
+
+    /* =========================
+       BROWSER CONTACT PAGE
+    ========================== */
+
+    #contactPage {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: #08090b;
     }
 
     .container {
@@ -34,7 +65,10 @@
       gap: 20px;
     }
 
-    /* IMAGE BUTTON */
+
+    /* =========================
+       IMAGE BUTTONS
+    ========================== */
 
     .image-button {
       display: block;
@@ -57,7 +91,10 @@
       border-radius: 20px;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media (max-width: 480px) {
 
@@ -71,45 +108,97 @@
       }
 
     }
-
   </style>
-
 </head>
 
 <body>
 
-  <div class="container">
 
-    <!-- TELEGRAM BUTTON -->
+  <!-- =========================
+       TIKTOK: VIDEO
+  ========================== -->
 
-    <a
-      class="image-button"
-      href="https://t.me/R_Q_S_grup"
-      target="_blank"
-      rel="noopener noreferrer">
+  <div id="videoPage">
 
-      <img
-        src="da03e785ab65fd227457271906a4225c.jpg"
-        alt="Telegram">
+    <video
+      controls
+      playsinline
+      autoplay
+      muted>
 
-    </a>
+      <source
+        src="lv_0_20260830034239.mp4"
+        type="video/mp4">
 
-
-    <!-- WHATSAPP BUTTON -->
-
-    <a
-      class="image-button"
-      href="https://wa.me/966565717120"
-      target="_blank"
-      rel="noopener noreferrer">
-
-      <img
-        src="file_00000000c138824693a99cf3ec0028f8.png"
-        alt="WhatsApp">
-
-    </a>
+    </video>
 
   </div>
+
+
+
+  <!-- =========================
+       CHROME / SAFARI:
+       TELEGRAM + WHATSAPP
+  ========================== -->
+
+  <div id="contactPage">
+
+    <div class="container">
+
+
+      <!-- TELEGRAM -->
+
+      <a
+        class="image-button"
+        href="https://t.me/R_Q_S_grup"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          src="da03e785ab65fd227457271906a4225c.jpg"
+          alt="Telegram">
+
+      </a>
+
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        class="image-button"
+        href="https://wa.me/966565717120"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          src="file_00000000c138824693a99cf3ec0028f8.png"
+          alt="WhatsApp">
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       DETECT TIKTOK
+  ========================== -->
+
+  <script>
+    const ua = navigator.userAgent || "";
+
+    const isTikTok =
+      /TikTok|Bytedance|musical_ly/i.test(ua);
+
+    if (isTikTok) {
+      document.getElementById("videoPage").style.display = "flex";
+    } else {
+      document.getElementById("contactPage").style.display = "flex";
+    }
+  </script>
 
 </body>
 </html>

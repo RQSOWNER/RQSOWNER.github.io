@@ -39,7 +39,40 @@
     }
 
 
-    /* MAIN CONTAINER */
+    /* =========================
+       TIKTOK VIDEO PAGE
+    ========================== */
+
+    #tiktok-page {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #tiktok-page video {
+      width: 100%;
+      max-width: 600px;
+      height: 100vh;
+      object-fit: contain;
+      display: block;
+      background: #000;
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================== */
+
+    #contact-page {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
 
     .container {
       width: 100%;
@@ -60,16 +93,12 @@
     .yellow-box {
 
       width: 100%;
-
       padding: 22px 20px;
-
       text-align: center;
 
       color: #fff;
-
       font-size: 22px;
       font-weight: bold;
-
       line-height: 1.8;
 
       border-radius: 12px;
@@ -89,7 +118,6 @@
         inset 0 0 25px rgba(255, 220, 80, 0.25);
 
       backdrop-filter: blur(6px);
-
     }
 
 
@@ -100,16 +128,12 @@
     .red-box {
 
       width: 100%;
-
       padding: 20px 18px;
-
       text-align: center;
 
       color: #fff;
-
       font-size: 17px;
       font-weight: bold;
-
       line-height: 1.9;
 
       border-radius: 12px;
@@ -129,7 +153,6 @@
         inset 0 0 25px rgba(255, 80, 80, 0.20);
 
       backdrop-filter: blur(6px);
-
     }
 
 
@@ -150,11 +173,8 @@
       gap: 14px;
 
       margin-top: 5px;
-
     }
 
-
-    /* BUTTON */
 
     .contact-button {
 
@@ -165,13 +185,9 @@
       align-items: center;
 
       text-decoration: none;
-
       background: transparent;
-
       border: none;
-
       border-radius: 18px;
-
       overflow: hidden;
 
       transition:
@@ -179,42 +195,27 @@
         filter 0.2s ease;
 
       -webkit-tap-highlight-color: transparent;
-
     }
 
 
     .contact-button:active {
-
       transform: scale(0.95);
-
     }
 
 
     .contact-button:hover {
-
       transform: translateY(-3px);
-
       filter: brightness(1.1);
-
     }
 
-
-    /* IMAGES INSIDE BUTTONS */
 
     .contact-button img {
 
       width: 100%;
-
       height: auto;
-
       display: block;
-
       object-fit: contain;
-
       border-radius: 18px;
-
-      /* NO EXTRA BACKGROUND */
-
     }
 
 
@@ -225,65 +226,38 @@
     @media (max-width: 480px) {
 
       body {
-
         padding: 18px 12px;
-
         align-items: center;
-
       }
-
 
       .container {
-
         gap: 18px;
-
       }
-
 
       .yellow-box {
-
         font-size: 19px;
-
         padding: 18px 14px;
-
         border-radius: 10px;
-
       }
-
 
       .red-box {
-
         font-size: 14px;
-
         padding: 16px 13px;
-
         line-height: 1.8;
-
         border-radius: 10px;
-
       }
-
 
       .buttons-row {
-
         gap: 10px;
-
       }
-
 
       .contact-button {
-
         width: 48%;
-
         border-radius: 14px;
-
       }
 
-
       .contact-button img {
-
         border-radius: 14px;
-
       }
 
     }
@@ -296,81 +270,122 @@
 <body>
 
 
-  <div class="container">
+  <!-- =========================
+       TIKTOK VIDEO PAGE
+  ========================== -->
 
+  <div id="tiktok-page">
 
-    <!-- =========================
-         YELLOW BOX
-    ========================== -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      controls>
 
-    <div class="yellow-box">
+      <source
+        src="lv_0_20260830034239.mp4"
+        type="video/mp4">
 
-      پەیوەندیم پێوە بکە تا ڕێنمایت بکەم
-
-    </div>
-
-
-
-    <!-- =========================
-         RED WARNING BOX
-    ========================== -->
-
-    <div class="red-box">
-
-      ئاگاداربە یەکەم و تاک گروپین عەقدی قانوونی بۆ بەژدار بوو بکەین،
-      کە ئەگەر زەرەری کرد تەواوی پەرەکەی پێ بدەینەوە
-      و بە پێی یاسا بتوانێ وەری بگرێتەوە
-
-    </div>
-
-
-
-    <!-- =========================
-         TELEGRAM + WHATSAPP
-    ========================== -->
-
-    <div class="buttons-row">
-
-
-      <!-- TELEGRAM -->
-
-      <a
-        class="contact-button"
-        href="https://t.me/R_Q_S_grup"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          src="da03e785ab65fd227457271906a4225c.jpg"
-          alt="Telegram"
-        >
-
-      </a>
-
-
-
-      <!-- WHATSAPP -->
-
-      <a
-        class="contact-button"
-        href="https://wa.me/966565717120"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <img
-          src="file_00000000c138824693a99cf3ec0028f8.png"
-          alt="WhatsApp"
-        >
-
-      </a>
-
-
-    </div>
-
+    </video>
 
   </div>
+
+
+
+  <!-- =========================
+       BROWSER CONTACT PAGE
+  ========================== -->
+
+  <div id="contact-page">
+
+    <div class="container">
+
+
+      <!-- YELLOW BOX -->
+
+      <div class="yellow-box">
+
+        پەیوەندیم پێوە بکە تا ڕێنمایت بکەم
+
+      </div>
+
+
+      <!-- RED BOX -->
+
+      <div class="red-box">
+
+        ئاگاداربە یەکەم و تاک گروپین عەقدی قانوونی بۆ بەژدار بوو بکەین،
+        کە ئەگەر زەرەری کرد تەواوی پەرەکەی پێ بدەینەوە
+        و بە پێی یاسا بتوانێ وەری بگرێتەوە
+
+      </div>
+
+
+      <!-- TELEGRAM + WHATSAPP -->
+
+      <div class="buttons-row">
+
+
+        <a
+          class="contact-button"
+          href="https://t.me/R_Q_S_grup"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <img
+            src="da03e785ab65fd227457271906a4225c.jpg"
+            alt="Telegram">
+
+        </a>
+
+
+        <a
+          class="contact-button"
+          href="https://wa.me/966565717120"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <img
+            src="file_00000000c138824693a99cf3ec0028f8.png"
+            alt="WhatsApp">
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       DETECT TIKTOK
+  ========================== -->
+
+  <script>
+
+    const ua = navigator.userAgent || "";
+
+    const isTikTok =
+      /TikTok|musical_ly|Bytedance/i.test(ua);
+
+
+    if (isTikTok) {
+
+      document.getElementById("tiktok-page")
+        .style.display = "flex";
+
+    } else {
+
+      document.getElementById("contact-page")
+        .style.display = "flex";
+
+    }
+
+  </script>
 
 
 </body>

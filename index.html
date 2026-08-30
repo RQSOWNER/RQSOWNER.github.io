@@ -20,26 +20,31 @@
       color: white;
     }
 
-    /* TikTok tutorial image */
-    #tutorial {
-      display: none;
+    /* VIDEO PAGE */
+    .video-page {
       width: 100%;
       min-height: 100vh;
-      background: #000;
+      background: #08090b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    #tutorial img {
+    video {
       width: 100%;
-      height: auto;
-      display: block;
+      max-width: 600px;
+      height: 100vh;
+      object-fit: contain;
+      background: black;
     }
 
-    /* Contact page */
-    #contact {
+    /* CONTACT PAGE */
+    .contact-page {
       display: none;
       min-height: 100vh;
       justify-content: center;
       align-items: center;
+      background: #08090b;
     }
 
     .container {
@@ -55,7 +60,6 @@
       color: #e4b936;
       letter-spacing: 8px;
       margin-bottom: 35px;
-      text-shadow: 0 0 20px rgba(228, 185, 54, 0.25);
     }
 
     .title {
@@ -75,7 +79,6 @@
       text-decoration: none;
       font-size: 25px;
       font-weight: bold;
-      letter-spacing: 1px;
     }
 
     .telegram {
@@ -96,17 +99,12 @@
     }
 
     @media (max-width: 480px) {
-      .container {
-        padding: 30px 20px;
-      }
-
       .logo {
         font-size: 55px;
       }
 
       .title {
         font-size: 25px;
-        margin-bottom: 45px;
       }
 
       .button {
@@ -119,16 +117,21 @@
 
 <body>
 
-  <!-- TikTok Browser: Tutorial Image -->
-  <div id="tutorial">
-    <img
-      src="Picsart_26-08-29_21-43-58-372.png"
-      alt="Open in browser">
+  <!-- VIDEO -->
+  <div class="video-page">
+    <video
+      controls
+      playsinline
+      autoplay
+      muted>
+      <source src="lv_0_20260830032357.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
   </div>
 
 
-  <!-- Chrome / Safari: Contact Page -->
-  <div id="contact">
+  <!-- CONTACT -->
+  <div class="contact-page">
 
     <div class="container">
 
@@ -136,6 +139,7 @@
 
       <div class="title">CONTACT US TO JOIN</div>
 
+      <!-- TELEGRAM -->
       <a
         class="button telegram"
         href="https://t.me/R_Q_S_grup"
@@ -144,6 +148,7 @@
         ✈️ TELEGRAM
       </a>
 
+      <!-- WHATSAPP -->
       <a
         class="button whatsapp"
         href="https://wa.me/966565717120"
@@ -157,17 +162,6 @@
     </div>
 
   </div>
-
-
-  <script>
-    const userAgent = navigator.userAgent || "";
-
-    if (/TikTok|Bytedance|musical_ly/i.test(userAgent)) {
-      document.getElementById("tutorial").style.display = "block";
-    } else {
-      document.getElementById("contact").style.display = "flex";
-    }
-  </script>
 
 </body>
 </html>

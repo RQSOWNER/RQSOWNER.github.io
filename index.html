@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ku">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>R.Q.S - Contact Us</title>
+  <title>R.Q.S</title>
 
   <style>
 
@@ -16,21 +14,15 @@
       box-sizing: border-box;
     }
 
-
     body {
       min-height: 100vh;
-
       font-family: Arial, sans-serif;
+      direction: rtl;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      /* BACKGROUND IMAGE */
       background-image:
         linear-gradient(
-          rgba(10, 8, 30, 0.20),
-          rgba(10, 8, 30, 0.20)
+          rgba(5, 5, 8, 0.35),
+          rgba(5, 5, 8, 0.55)
         ),
         url("Picsart_26-08-30_03-52-27-072.png");
 
@@ -38,27 +30,135 @@
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 25px 15px;
     }
 
 
+    /* MAIN CONTAINER */
+
     .container {
       width: 100%;
-      max-width: 600px;
-
-      padding: 60px 35px;
+      max-width: 650px;
 
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
 
-      gap: 30px;
+      gap: 22px;
+    }
+
+
+    /* =========================
+       YELLOW INFORMATION BOX
+    ========================== */
+
+    .yellow-box {
+
+      width: 100%;
+
+      padding: 22px 20px;
+
+      text-align: center;
+
+      color: #fff;
+
+      font-size: 22px;
+      font-weight: bold;
+
+      line-height: 1.8;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 210, 60, 0.38),
+          rgba(150, 105, 0, 0.20)
+        );
+
+      border: 2px solid rgba(255, 220, 80, 0.9);
+
+      box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 0 25px rgba(255, 215, 0, 0.5),
+        inset 0 0 25px rgba(255, 220, 80, 0.25);
+
+      backdrop-filter: blur(6px);
+
+    }
+
+
+    /* =========================
+       RED WARNING BOX
+    ========================== */
+
+    .red-box {
+
+      width: 100%;
+
+      padding: 20px 18px;
+
+      text-align: center;
+
+      color: #fff;
+
+      font-size: 17px;
+      font-weight: bold;
+
+      line-height: 1.9;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 70, 70, 0.45),
+          rgba(120, 0, 0, 0.28)
+        );
+
+      border: 2px solid rgba(255, 90, 90, 0.9);
+
+      box-shadow:
+        0 0 12px rgba(255, 40, 40, 0.75),
+        0 0 30px rgba(255, 0, 0, 0.35),
+        inset 0 0 25px rgba(255, 80, 80, 0.20);
+
+      backdrop-filter: blur(6px);
+
+    }
+
+
+    /* =========================
+       CONTACT BUTTONS
+    ========================== */
+
+    .buttons-row {
+
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 14px;
+
+      margin-top: 5px;
+
     }
 
 
     /* BUTTON */
-    .button {
-      width: 100%;
+
+    .contact-button {
+
+      width: 48%;
 
       display: flex;
       justify-content: center;
@@ -66,55 +166,124 @@
 
       text-decoration: none;
 
-      border-radius: 30px;
+      background: transparent;
+
+      border: none;
+
+      border-radius: 18px;
 
       overflow: hidden;
 
-      transition: 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
 
       -webkit-tap-highlight-color: transparent;
+
     }
 
 
-    .button:active {
-      transform: scale(0.96);
+    .contact-button:active {
+
+      transform: scale(0.95);
+
     }
 
 
-    /* TELEGRAM IMAGE */
-    .telegram img {
+    .contact-button:hover {
+
+      transform: translateY(-3px);
+
+      filter: brightness(1.1);
+
+    }
+
+
+    /* IMAGES INSIDE BUTTONS */
+
+    .contact-button img {
+
       width: 100%;
-      max-width: 420px;
+
+      height: auto;
 
       display: block;
 
-      border-radius: 30px;
+      object-fit: contain;
+
+      border-radius: 18px;
+
+      /* NO EXTRA BACKGROUND */
+
     }
 
 
-    /* WHATSAPP IMAGE */
-    .whatsapp img {
-      width: 100%;
-      max-width: 420px;
-
-      display: block;
-
-      border-radius: 30px;
-    }
-
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media (max-width: 480px) {
 
-      .container {
-        padding: 50px 25px;
-        gap: 25px;
+      body {
+
+        padding: 18px 12px;
+
+        align-items: center;
+
       }
 
 
-      .telegram img,
-      .whatsapp img {
-        max-width: 100%;
-        border-radius: 25px;
+      .container {
+
+        gap: 18px;
+
+      }
+
+
+      .yellow-box {
+
+        font-size: 19px;
+
+        padding: 18px 14px;
+
+        border-radius: 10px;
+
+      }
+
+
+      .red-box {
+
+        font-size: 14px;
+
+        padding: 16px 13px;
+
+        line-height: 1.8;
+
+        border-radius: 10px;
+
+      }
+
+
+      .buttons-row {
+
+        gap: 10px;
+
+      }
+
+
+      .contact-button {
+
+        width: 48%;
+
+        border-radius: 14px;
+
+      }
+
+
+      .contact-button img {
+
+        border-radius: 14px;
+
       }
 
     }
@@ -130,39 +299,75 @@
   <div class="container">
 
 
-    <!-- TELEGRAM BUTTON -->
+    <!-- =========================
+         YELLOW BOX
+    ========================== -->
 
-    <a
-      class="button telegram"
-      href="https://t.me/R_Q_S_grup"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <div class="yellow-box">
 
-      <img
-        src="da03e785ab65fd227457271906a4225c.jpg"
-        alt="Telegram"
+      پەیوەندیم پێوە بکە تا ڕێنمایت بکەم
+
+    </div>
+
+
+
+    <!-- =========================
+         RED WARNING BOX
+    ========================== -->
+
+    <div class="red-box">
+
+      ئاگاداربە یەکەم و تاک گروپین عەقدی قانوونی بۆ بەژدار بوو بکەین،
+      کە ئەگەر زەرەری کرد تەواوی پەرەکەی پێ بدەینەوە
+      و بە پێی یاسا بتوانێ وەری بگرێتەوە
+
+    </div>
+
+
+
+    <!-- =========================
+         TELEGRAM + WHATSAPP
+    ========================== -->
+
+    <div class="buttons-row">
+
+
+      <!-- TELEGRAM -->
+
+      <a
+        class="contact-button"
+        href="https://t.me/R_Q_S_grup"
+        target="_blank"
+        rel="noopener noreferrer"
       >
 
-    </a>
+        <img
+          src="da03e785ab65fd227457271906a4225c.jpg"
+          alt="Telegram"
+        >
+
+      </a>
 
 
 
-    <!-- WHATSAPP BUTTON -->
+      <!-- WHATSAPP -->
 
-    <a
-      class="button whatsapp"
-      href="https://wa.me/966565717120"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-
-      <img
-        src="file_00000000c138824693a99cf3ec0028f8.png"
-        alt="WhatsApp"
+      <a
+        class="contact-button"
+        href="https://wa.me/966565717120"
+        target="_blank"
+        rel="noopener noreferrer"
       >
 
-    </a>
+        <img
+          src="file_00000000c138824693a99cf3ec0028f8.png"
+          alt="WhatsApp"
+        >
+
+      </a>
+
+
+    </div>
 
 
   </div>

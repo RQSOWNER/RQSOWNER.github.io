@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>R.Q.S - Contact Us</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -16,125 +18,75 @@
     body {
       min-height: 100vh;
       background: #08090b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: Arial, sans-serif;
-      color: white;
     }
 
     .container {
       width: 100%;
       max-width: 600px;
-      min-height: 100vh;
-      margin: auto;
-      padding: 35px 20px;
-      text-align: center;
+      padding: 25px 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      gap: 20px;
     }
 
-    .logo {
-      font-size: 55px;
-      font-weight: bold;
-      color: #e4b936;
-      letter-spacing: 7px;
-      margin-bottom: 20px;
-    }
+    /* IMAGE BUTTON */
 
-    .title {
-      font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 35px;
-      color: #f2f2f2;
-    }
-
-    /* TELEGRAM IMAGE BUTTON */
-    .telegram-image {
+    .image-button {
       display: block;
-      width: 100%;
-      margin: 15px auto 25px;
+      width: 75%;
+      max-width: 380px;
+      border-radius: 20px;
+      overflow: hidden;
       text-decoration: none;
-      transition: 0.2s ease;
+      transition: transform 0.2s ease;
     }
 
-    .telegram-image:active {
-      transform: scale(0.97);
+    .image-button:active {
+      transform: scale(0.96);
     }
 
-    .telegram-image img {
+    .image-button img {
       width: 100%;
-      max-width: 500px;
+      height: auto;
       display: block;
-      margin: auto;
-      border-radius: 25px;
+      border-radius: 20px;
     }
 
-    /* WHATSAPP BUTTON */
-    .whatsapp {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto;
-      padding: 25px 20px;
-      border-radius: 28px;
-      text-decoration: none;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      background: transparent;
-      color: #e4b936;
-      border: 3px solid #e4b936;
-      transition: 0.2s ease;
-    }
-
-    .whatsapp:active {
-      transform: scale(0.97);
-    }
-
-    .footer {
-      margin-top: 35px;
-      color: #777;
-      font-size: 14px;
-    }
+    /* MOBILE */
 
     @media (max-width: 480px) {
 
       .container {
-        padding: 30px 18px;
+        padding: 20px 15px;
+        gap: 18px;
       }
 
-      .logo {
-        font-size: 45px;
-      }
-
-      .title {
-        font-size: 22px;
-      }
-
-      .whatsapp {
-        font-size: 21px;
-        padding: 22px 15px;
+      .image-button {
+        width: 80%;
       }
 
     }
+
   </style>
+
 </head>
 
 <body>
 
   <div class="container">
 
-    <div class="logo">R.Q.S 💡</div>
+    <!-- TELEGRAM BUTTON -->
 
-    <div class="title">CONTACT US TO JOIN</div>
-
-
-    <!-- TELEGRAM IMAGE -->
     <a
+      class="image-button"
       href="https://t.me/R_Q_S_grup"
       target="_blank"
-      rel="noopener noreferrer"
-      class="telegram-image">
+      rel="noopener noreferrer">
 
       <img
         src="da03e785ab65fd227457271906a4225c.jpg"
@@ -143,21 +95,19 @@
     </a>
 
 
-    <!-- WHATSAPP -->
+    <!-- WHATSAPP BUTTON -->
+
     <a
+      class="image-button"
       href="https://wa.me/966565717120"
       target="_blank"
-      rel="noopener noreferrer"
-      class="whatsapp">
+      rel="noopener noreferrer">
 
-      📞 WHATSAPP
+      <img
+        src="file_00000000c138824693a99cf3ec0028f8.png"
+        alt="WhatsApp">
 
     </a>
-
-
-    <div class="footer">
-      © R.Q.S
-    </div>
 
   </div>
 

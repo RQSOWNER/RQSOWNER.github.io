@@ -20,145 +20,143 @@
       color: white;
     }
 
-    /* VIDEO PAGE */
-    .video-page {
-      width: 100%;
-      min-height: 100vh;
-      background: #08090b;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    video {
-      width: 100%;
-      max-width: 600px;
-      height: 100vh;
-      object-fit: contain;
-      background: black;
-    }
-
-    /* CONTACT PAGE */
-    .contact-page {
-      display: none;
-      min-height: 100vh;
-      justify-content: center;
-      align-items: center;
-      background: #08090b;
-    }
-
     .container {
       width: 100%;
       max-width: 600px;
-      padding: 40px 25px;
+      min-height: 100vh;
+      margin: auto;
+      padding: 35px 20px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .logo {
-      font-size: 70px;
+      font-size: 55px;
       font-weight: bold;
       color: #e4b936;
-      letter-spacing: 8px;
-      margin-bottom: 35px;
+      letter-spacing: 7px;
+      margin-bottom: 20px;
     }
 
     .title {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: bold;
       letter-spacing: 2px;
-      margin-bottom: 60px;
+      margin-bottom: 35px;
       color: #f2f2f2;
     }
 
-    .button {
-      width: 100%;
+    /* TELEGRAM IMAGE BUTTON */
+    .telegram-image {
       display: block;
-      padding: 28px 20px;
-      margin: 22px 0;
+      width: 100%;
+      margin: 15px auto 25px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .telegram-image:active {
+      transform: scale(0.97);
+    }
+
+    .telegram-image img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: auto;
+      border-radius: 25px;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto;
+      padding: 25px 20px;
       border-radius: 28px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 24px;
       font-weight: bold;
-    }
-
-    .telegram {
-      background: #e4b936;
-      color: #111;
-    }
-
-    .whatsapp {
+      letter-spacing: 1px;
       background: transparent;
       color: #e4b936;
       border: 3px solid #e4b936;
+      transition: 0.2s ease;
+    }
+
+    .whatsapp:active {
+      transform: scale(0.97);
     }
 
     .footer {
-      margin-top: 45px;
+      margin-top: 35px;
       color: #777;
-      font-size: 13px;
+      font-size: 14px;
     }
 
     @media (max-width: 480px) {
+
+      .container {
+        padding: 30px 18px;
+      }
+
       .logo {
-        font-size: 55px;
+        font-size: 45px;
       }
 
       .title {
-        font-size: 25px;
+        font-size: 22px;
       }
 
-      .button {
+      .whatsapp {
         font-size: 21px;
-        padding: 25px 15px;
+        padding: 22px 15px;
       }
+
     }
   </style>
 </head>
 
 <body>
 
-  <!-- VIDEO -->
-  <div class="video-page">
-    <video
-      controls
-      playsinline
-      autoplay
-      muted>
-      <source src="lv_0_20260830032357.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
-  </div>
+  <div class="container">
+
+    <div class="logo">R.Q.S 💡</div>
+
+    <div class="title">CONTACT US TO JOIN</div>
 
 
-  <!-- CONTACT -->
-  <div class="contact-page">
+    <!-- TELEGRAM IMAGE -->
+    <a
+      href="https://t.me/R_Q_S_grup"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="telegram-image">
 
-    <div class="container">
+      <img
+        src="da03e785ab65fd227457271906a4225c.jpg"
+        alt="Telegram">
 
-      <div class="logo">R.Q.S 💡</div>
+    </a>
 
-      <div class="title">CONTACT US TO JOIN</div>
 
-      <!-- TELEGRAM -->
-      <a
-        class="button telegram"
-        href="https://t.me/R_Q_S_grup"
-        target="_blank"
-        rel="noopener noreferrer">
-        ✈️ TELEGRAM
-      </a>
+    <!-- WHATSAPP -->
+    <a
+      href="https://wa.me/966565717120"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp">
 
-      <!-- WHATSAPP -->
-      <a
-        class="button whatsapp"
-        href="https://wa.me/966565717120"
-        target="_blank"
-        rel="noopener noreferrer">
-        📞 WHATSAPP
-      </a>
+      📞 WHATSAPP
 
-      <div class="footer">© R.Q.S</div>
+    </a>
 
+
+    <div class="footer">
+      © R.Q.S
     </div>
 
   </div>

@@ -7,6 +7,7 @@
   <title>R.Q.S</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -15,29 +16,38 @@
 
     body {
       min-height: 100vh;
+      background: #000;
       font-family: Arial, sans-serif;
       direction: rtl;
     }
 
+
     /* =========================
-       TIKTOK VIDEO PAGE
+       TIKTOK / IMAGE PAGE
     ========================== */
 
     #tiktok-page {
-      display: none;
+      display: flex;
       width: 100%;
       min-height: 100vh;
+
       background: #000;
+
       justify-content: center;
       align-items: center;
     }
 
-    #tiktok-page video {
+
+    #tiktok-page img {
       width: 100%;
       max-width: 600px;
+
       height: 100vh;
+
       object-fit: contain;
+
       display: block;
+
       background: #000;
     }
 
@@ -48,6 +58,7 @@
 
     #contact-page {
       display: none;
+
       width: 100%;
       min-height: 100vh;
 
@@ -80,6 +91,7 @@
 
       display: flex;
       flex-direction: column;
+
       align-items: center;
 
       gap: 22px;
@@ -92,13 +104,17 @@
 
     .yellow-box {
       width: 100%;
+
       padding: 22px 20px;
 
       text-align: center;
 
       color: #fff;
+
       font-size: 22px;
+
       font-weight: bold;
+
       line-height: 1.8;
 
       border-radius: 12px;
@@ -127,13 +143,17 @@
 
     .red-box {
       width: 100%;
+
       padding: 20px 18px;
 
       text-align: center;
 
       color: #fff;
+
       font-size: 17px;
+
       font-weight: bold;
+
       line-height: 1.9;
 
       border-radius: 12px;
@@ -164,9 +184,11 @@
       width: 100%;
 
       display: flex;
+
       flex-direction: row;
 
       justify-content: center;
+
       align-items: center;
 
       gap: 14px;
@@ -179,14 +201,19 @@
       width: 48%;
 
       display: flex;
+
       justify-content: center;
+
       align-items: center;
 
       text-decoration: none;
+
       background: transparent;
+
       border: none;
 
       border-radius: 18px;
+
       overflow: hidden;
 
       transition: transform 0.2s ease;
@@ -202,9 +229,11 @@
 
     .contact-button img {
       width: 100%;
+
       height: auto;
 
       display: block;
+
       object-fit: contain;
 
       border-radius: 18px;
@@ -221,35 +250,48 @@
         padding: 18px 12px;
       }
 
+
       .container {
         gap: 18px;
       }
 
+
       .yellow-box {
         font-size: 19px;
+
         padding: 18px 14px;
+
         border-radius: 10px;
       }
 
+
       .red-box {
         font-size: 14px;
+
         padding: 16px 13px;
+
         line-height: 1.8;
+
         border-radius: 10px;
       }
+
 
       .buttons-row {
         gap: 10px;
       }
 
+
       .contact-button {
         width: 48%;
+
         border-radius: 14px;
       }
+
 
       .contact-button img {
         border-radius: 14px;
       }
+
     }
 
   </style>
@@ -260,23 +302,14 @@
 
 
   <!-- =========================
-       TIKTOK VIDEO PAGE
+       TIKTOK IMAGE PAGE
   ========================== -->
 
   <div id="tiktok-page">
 
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      controls>
-
-      <source
-        src="lv_0_20260830034239.mp4"
-        type="video/mp4">
-
-    </video>
+    <img
+      src="IMG_20260921_190803_022.jpg"
+      alt="Instruction">
 
   </div>
 
@@ -294,16 +327,20 @@
       <!-- YELLOW BOX -->
 
       <div class="yellow-box">
+
         پەیوەندیم پێوە بکە تا ڕێنمایت بکەم
+
       </div>
 
 
       <!-- RED BOX -->
 
       <div class="red-box">
+
         ئاگاداربە یەکەم و تاک گروپین عەقدی قانوونی بۆ بەژدار بوو بکەین،
         کە ئەگەر زەرەری کرد تەواوی پەرەکەی پێ بدەینەوە
         و بە پێی یاسا بتوانێ وەری بگرێتەوە
+
       </div>
 
 
@@ -325,6 +362,7 @@
             alt="Telegram">
 
         </a>
+
 
 
         <!-- WHATSAPP -->
@@ -361,11 +399,18 @@
     const isTikTok =
       /TikTok|musical_ly|Bytedance/i.test(ua);
 
+
     if (isTikTok) {
 
       document.getElementById("tiktok-page").style.display = "flex";
 
-    } else {
+      document.getElementById("contact-page").style.display = "none";
+
+    } 
+    
+    else {
+
+      document.getElementById("tiktok-page").style.display = "none";
 
       document.getElementById("contact-page").style.display = "flex";
 

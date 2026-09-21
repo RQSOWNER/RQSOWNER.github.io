@@ -23,11 +23,11 @@
 
 
     /* =========================
-       TIKTOK / IMAGE PAGE
+       TIKTOK IMAGE PAGE
     ========================== */
 
     #tiktok-page {
-      display: flex;
+      display: none;
       width: 100%;
       min-height: 100vh;
 
@@ -36,7 +36,6 @@
       justify-content: center;
       align-items: center;
     }
-
 
     #tiktok-page img {
       width: 100%;
@@ -250,43 +249,31 @@
         padding: 18px 12px;
       }
 
-
       .container {
         gap: 18px;
       }
 
-
       .yellow-box {
         font-size: 19px;
-
         padding: 18px 14px;
-
         border-radius: 10px;
       }
-
 
       .red-box {
         font-size: 14px;
-
         padding: 16px 13px;
-
         line-height: 1.8;
-
         border-radius: 10px;
       }
-
 
       .buttons-row {
         gap: 10px;
       }
 
-
       .contact-button {
         width: 48%;
-
         border-radius: 14px;
       }
-
 
       .contact-button img {
         border-radius: 14px;
@@ -308,7 +295,7 @@
   <div id="tiktok-page">
 
     <img
-      src="IMG_20260921_190803_022.jpg"
+      src="IMG_20260921_190803_022.jpg?v=2"
       alt="Instruction">
 
   </div>
@@ -324,32 +311,20 @@
     <div class="container">
 
 
-      <!-- YELLOW BOX -->
-
       <div class="yellow-box">
-
         پەیوەندیم پێوە بکە تا ڕێنمایت بکەم
-
       </div>
 
 
-      <!-- RED BOX -->
-
       <div class="red-box">
-
         ئاگاداربە یەکەم و تاک گروپین عەقدی قانوونی بۆ بەژدار بوو بکەین،
         کە ئەگەر زەرەری کرد تەواوی پەرەکەی پێ بدەینەوە
         و بە پێی یاسا بتوانێ وەری بگرێتەوە
-
       </div>
 
 
-      <!-- TELEGRAM + WHATSAPP -->
-
       <div class="buttons-row">
 
-
-        <!-- TELEGRAM -->
 
         <a
           class="contact-button"
@@ -363,9 +338,6 @@
 
         </a>
 
-
-
-        <!-- WHATSAPP -->
 
         <a
           class="contact-button"
@@ -406,9 +378,7 @@
 
       document.getElementById("contact-page").style.display = "none";
 
-    } 
-    
-    else {
+    } else {
 
       document.getElementById("tiktok-page").style.display = "none";
 
